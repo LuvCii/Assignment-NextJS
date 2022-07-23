@@ -19,7 +19,7 @@ const Home: NextPage = () => {
 
         <p className={styles.description}>
           Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
+          <p className='text-red-400'>pages/index.tsx</p>
         </p>
 
         <div className={styles.grid}>
