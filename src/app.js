@@ -4,6 +4,7 @@ import morgan from "morgan";
 import mongoose from "mongoose";
 import productRouter from "./routers/product";
 import categoryRouter from './routers/category'
+import userRouter from "./routers/user";
 
 const app = express();
 
@@ -12,7 +13,8 @@ app.use(morgan("tiny"));
 app.use(express.json());
 
 app.use("/api", productRouter);
-app.use("/api",categoryRouter)
+app.use("/api", categoryRouter)
+app.use("/api", userRouter)
 
 
 mongoose
