@@ -15,16 +15,29 @@ export const list = async (req, res) => {
 export const create = async (req, res) => {
   req.body.slug = slugify(req.body.name);
   try {
-    const product = await Product(req.body).save();
+    const product = await new Product(req.body).save();
+    console.log(product);
     return res.json(product);
   } catch (error) {
     return res.status(400).json({
-      message: "Không thêm được",
+      message: "Không thêm được sản phẩm",
     });
   }
 };
 
-export const read = async (req, res) => {
+export const readId = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const product = await Product.findOne({ id }).exec();
+    return res.json(product);
+  } catch (error) {
+    return res.status(400).json({
+      message: "Không có sản phẩm",
+    });
+  }
+};
+
+export const readSlug = async (req, res) => {
   const { slug } = req.params;
   try {
     const product = await Product.findOne({ slug }).exec();
