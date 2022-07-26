@@ -15,10 +15,9 @@ app.use("/api", productRouter);
 mongoose
   .connect("mongodb://localhost:27017/Assigment-NextJS")
   .then(() => console.log("Ket noi db thanh cong"))
-  .then((error) => console.log(error));
+  .catch((error) => console.log(error));
 
-const PORT = 8001;
-1;
+const PORT = 8000;
 app.listen(PORT, () => {
   console.log("server running port", PORT);
 });
