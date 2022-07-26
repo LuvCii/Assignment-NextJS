@@ -14,7 +14,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main >
-        <iframe width="100%" height="166" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1214576869&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div ><Link href="https://soundcloud.com/jangtodalee" title="Giang Văn Lê" target="_blank" >Giang Lê Văn</Link> · <Link href="https://soundcloud.com/jangtodalee/coldzy-tlinh-2pillz-if-you-said-so-remix" title="Coldzy, Tlinh, 2pillz - If You Said So (Remix)" target="_blank" >Coldzy, Tlinh, 2pillz - If You Said So (Remix)</Link></div>
+        {/* <iframe width="100%" height="166" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1214576869&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div ><Link href="https://soundcloud.com/jangtodalee" title="Giang Văn Lê" target="_blank" >Giang Lê Văn</Link> · <Link href="https://soundcloud.com/jangtodalee/coldzy-tlinh-2pillz-if-you-said-so-remix" title="Coldzy, Tlinh, 2pillz - If You Said So (Remix)" target="_blank" >Coldzy, Tlinh, 2pillz - If You Said So (Remix)</Link></div> */}
+        <Link href="/productDetail">ProductDetail</Link>
       </main>
 
 
