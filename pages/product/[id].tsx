@@ -8,18 +8,18 @@ const ProductDetail = (props: Props) => {
     <div className='px-12 py-8'>
       <div className='grid grid-cols-12 gap-4 '>
            <div className='col-span-6 overflow-hidden'>
-            <img className='transition-transform duration-500 transform hover:scale-75' src='https://product.hstatic.net/200000306687/product/155457v-drake1-650x650_6d9e4831accf40a2b5bbeaba8de13897_master.jpeg' />
+            <img className='transition-transform duration-500 transform hover:scale-75' src='https://booklovers.ancorathemes.com/wp-content/uploads/2020/05/book11-copyright.jpg' />
            </div>
            <div className='col-span-6'>
-            <div className='text-xl font-bold'>Chuck Taylor All Star II Festival Knit</div>
+            <div className='text-2xl font-bold'>A Doctor in the House</div>
             <div className='grid grid-cols-6 gap-4 py-4'>
               <div className='col-span-3'>
-                <strong>Tình trạng:</strong>Còn hàng<br></br>
-                <strong>Thương hiệu:</strong>Converse
+                <strong>Status:</strong>Còn hàng
+                
               </div>
               <div className='col-span-3'>
-              <strong>Tình trạng:</strong>Còn hàng<br></br>
-                <strong>Thương hiệu:</strong>Converse
+              <strong>Publisher:</strong>NXB Kim Đồng<br></br>
+                <strong>Author:</strong>Kim Lân
               </div>
             </div>
             <hr></hr>
@@ -34,13 +34,8 @@ const ProductDetail = (props: Props) => {
             <hr></hr>
 
             <div className='py-8'>
-              <h3 className='pb-2'>KÍCH THƯỚC</h3>
-              <div className='grid grid-cols-12 gap-2'>
-              <div className='col-span-1 border rounded-lg text-center border-slate-400 hover:border-slate-900'>35</div>
-                <div className='col-span-1 border rounded-lg text-center border-slate-400 hover:border-slate-900'>36</div>
-                <div className='col-span-1 border rounded-lg text-center border-slate-400 hover:border-slate-900'>37</div>
-                <div className='col-span-1 border rounded-lg text-center border-slate-400 hover:border-slate-900'>38</div>
-              </div>
+              <h3 className='pb-2 text-2xl font-bold'>MÔ TẢ</h3>
+              <p>Dicta sunt explicabo. Nemo enim ipsam voluptatem voluptas sit odit aut fugit, sed quia consequuntur. Lorem ipsum dolor. Aquia sit amet, elitr, sed diam nonum eirmod tempor invidunt.</p>
             </div>
 
 
