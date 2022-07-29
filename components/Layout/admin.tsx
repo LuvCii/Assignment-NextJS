@@ -6,9 +6,9 @@ type Props = {}
 const LayoutAdmin = ({ children }: LayoutProps) => {
     return (
         <><div>
-            {/* <p>
+            <p>
                 side bar
-            </p> */}
+            </p>
         </div><div>
                 {children}
             </div></>
