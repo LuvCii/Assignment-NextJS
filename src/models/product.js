@@ -27,10 +27,10 @@ const productSchema = new Schema(
       type: String,
       required: true,
     },
-    //   categoryId: {
-    //     type: ObjectId,
-    //     ref: "Categories",
-    // },
+    categoryId: {
+      type: ObjectId,
+      ref: "Categories",
+    },
     author: {
       type: String,
       required: true,

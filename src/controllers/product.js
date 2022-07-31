@@ -16,7 +16,6 @@ export const create = async (req, res) => {
   req.body.slug = slugify(req.body.name);
   try {
     const product = await new Product(req.body).save();
-    console.log(product);
     return res.json(product);
   } catch (error) {
     return res.status(400).json({
@@ -26,9 +25,8 @@ export const create = async (req, res) => {
 };
 
 export const readId = async (req, res) => {
-  const { id } = req.params;
   try {
-    const product = await Product.findOne({ id }).exec();
+    const product = await Product.findOne({ _id: req.params.id }).exec();
     return res.json(product);
   } catch (error) {
     return res.status(400).json({
