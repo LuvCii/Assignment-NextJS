@@ -1,17 +1,20 @@
 import Link from 'next/link'
 import React from 'react'
+import styles from '../styles/Home.module.css'
 
 type Props = {}
 
 const Header = (props: Props) => {
     return (
         <div>
-            <header className='relative'>
-                <div className='relative'>
-                    <nav className=" delay-150 bg-white border-gray-200 px-2 sm:px-4 w-full pt-7 rounded">
+            <header className=' relative'>
+                <div className=' relative'>
+                    <nav className="fixed z-50 delay-150 bg-white border-gray-200 px-2 sm:px-4 w-full pt-7 rounded">
                         <div className=" container flex flex-wrap justify-between items-center h-20 mx-auto">
-                            <Link href="https://flowbite.com" className="flex items-center">
-                                <img src="https://storagemaplebearnovo.blob.core.windows.net/maplebear-media/filer_public_thumbnails/filer_public/71/51/7151a441-bdfd-454a-ae61-08d967dbdc17/analitico.png__600x400_subsampling-2.png" className="sm:h-9" alt="Daniel Green Logo" />
+                            <Link href="/" className="flex items-center">
+                                <a>
+                                    <img src="https://i.ibb.co/txk1P2j/read.png" className="w-20" alt="Book store Logo" />
+                                </a>
 
                             </Link>
 
@@ -45,7 +48,6 @@ const Header = (props: Props) => {
                                 </ul>
                             </div>
 
-
                             <div className="hidden justify-between items-center w-full md:flex md:w-auto md:order-1">
 
                                 <form action="">
@@ -65,7 +67,7 @@ const Header = (props: Props) => {
                                 </form>
 
 
-                                <ul className="flex flex-col mt-4 mx-2 md:flex-row md:mt-0  ">
+                                <ul className="flex flex-col mt-5 mx-2 md:flex-row md:mt-0  ">
                                     <li className='mx-2 '>
                                         <Link href="" className="p-2" aria-current="page">
                                             <a >
@@ -74,11 +76,49 @@ const Header = (props: Props) => {
                                         </Link>
                                     </li>
                                     <li className='mx-2'>
-                                        <Link href="" className="p-2" aria-current="page">
-                                            <a >
+                                        <div className={styles.dropdown}>
+                                            <button className={styles.dropbtn}>
                                                 <img src="https://i.ibb.co/RbF9M4j/user.png" width="30px" alt="" />
-                                            </a>
-                                        </Link>
+                                            </button>
+                                            <div className={styles.dropdownContent}>
+                                                <Link href="/profile">
+                                                    <a className='flex py-3 px-2'>
+                                                        <span className='inline-flex justify-between mr-3'>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="20" height="20"><path d="M16.043,14H7.957A4.963,4.963,0,0,0,3,18.957V24H21V18.957A4.963,4.963,0,0,0,16.043,14Z" /><circle cx="12" cy="6" r="6" /></svg>
+                                                        </span>
+                                                        <span>
+                                                            Profile
+                                                        </span>
+                                                    </a>
+                                                </Link>
+                                                <Link href="#">
+                                                    <a className='flex py-3 px-2'>
+                                                        <span className='inline-flex justify-between mr-3'>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="20" height="20"><path d="M21,12a9.143,9.143,0,0,0-.15-1.645L23.893,8.6l-3-5.2L17.849,5.159A9,9,0,0,0,15,3.513V0H9V3.513A9,9,0,0,0,6.151,5.159L3.107,3.4l-3,5.2L3.15,10.355a9.1,9.1,0,0,0,0,3.29L.107,15.4l3,5.2,3.044-1.758A9,9,0,0,0,9,20.487V24h6V20.487a9,9,0,0,0,2.849-1.646L20.893,20.6l3-5.2L20.85,13.645A9.143,9.143,0,0,0,21,12Zm-6,0a3,3,0,1,1-3-3A3,3,0,0,1,15,12Z" /></svg>
+                                                        </span>
+                                                        <span className='mt-8'>
+                                                            Go to admin
+                                                        </span>
+                                                    </a>
+                                                </Link>
+                                                <Link href="#">
+                                                    <a className='flex py-3 px-2'>
+                                                        <span className='inline-flex justify-between mr-3'>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" width="20" height="20">
+                                                                <g>
+                                                                    <path d="M170.698,448H72.757c-4.814-0.012-8.714-3.911-8.725-8.725V72.725c0.012-4.814,3.911-8.714,8.725-8.725h97.941   c17.673,0,32-14.327,32-32s-14.327-32-32-32H72.757C32.611,0.047,0.079,32.58,0.032,72.725v366.549   C0.079,479.42,32.611,511.953,72.757,512h97.941c17.673,0,32-14.327,32-32S188.371,448,170.698,448z" />
+                                                                    <path d="M483.914,188.117l-82.816-82.752c-12.501-12.495-32.764-12.49-45.259,0.011s-12.49,32.764,0.011,45.259l72.789,72.768   L138.698,224c-17.673,0-32,14.327-32,32s14.327,32,32,32l0,0l291.115-0.533l-73.963,73.963   c-12.042,12.936-11.317,33.184,1.618,45.226c12.295,11.445,31.346,11.436,43.63-0.021l82.752-82.752   c37.491-37.49,37.491-98.274,0.001-135.764c0,0-0.001-0.001-0.001-0.001L483.914,188.117z" />
+                                                                </g>
+                                                            </svg>
+                                                        </span>
+                                                        <span>
+                                                            Log out
+                                                        </span>
+                                                    </a>
+                                                </Link>
+
+                                            </div>
+                                        </div>
                                     </li>
                                     <li className='mx-2 hover:translate-x-1  ease-in-out transition-all'>
                                         <Link href="" className="p-2" aria-current="page">
