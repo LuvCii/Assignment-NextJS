@@ -1,5 +1,6 @@
 import { url } from 'inspector'
 import React from 'react'
+import LayoutEmpty from '../components/Layout/empty'
 
 type Props = {}
 
@@ -53,5 +54,5 @@ const SignIn = (props: Props) => {
 
   )
 }
-
+SignIn.Layout = LayoutEmpty
 export default SignIn
