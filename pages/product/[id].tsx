@@ -7,19 +7,19 @@ const ProductDetail = (props: Props) => {
   return (
     <div className='px-12 py-8'>
       <div className='grid grid-cols-12 gap-4 '>
-           <div className='col-span-6'>
-            <img src='https://product.hstatic.net/200000306687/product/155457v-drake1-650x650_6d9e4831accf40a2b5bbeaba8de13897_master.jpeg' />
+           <div className='col-span-6 overflow-hidden'>
+            <img className='transition-transform duration-500 transform hover:scale-75' src='https://booklovers.ancorathemes.com/wp-content/uploads/2020/05/book11-copyright.jpg' />
            </div>
            <div className='col-span-6'>
-            <div className='text-xl font-bold'>Chuck Taylor All Star II Festival Knit</div>
+            <div className='text-2xl font-bold'>A Doctor in the House</div>
             <div className='grid grid-cols-6 gap-4 py-4'>
               <div className='col-span-3'>
-                <strong>Tình trạng:</strong>Còn hàng<br></br>
-                <strong>Thương hiệu:</strong>Converse
+                <strong>Status:</strong>Còn hàng
+                
               </div>
               <div className='col-span-3'>
-              <strong>Tình trạng:</strong>Còn hàng<br></br>
-                <strong>Thương hiệu:</strong>Converse
+              <strong>Publisher:</strong>NXB Kim Đồng<br></br>
+                <strong>Author:</strong>Kim Lân
               </div>
             </div>
             <hr></hr>
@@ -34,13 +34,8 @@ const ProductDetail = (props: Props) => {
             <hr></hr>
 
             <div className='py-8'>
-              <h3 className='pb-2'>KÍCH THƯỚC</h3>
-              <div className='grid grid-cols-12 gap-2'>
-              <div className='col-span-1 border rounded-lg text-center border-slate-400 hover:border-slate-900'>35</div>
-                <div className='col-span-1 border rounded-lg text-center border-slate-400 hover:border-slate-900'>36</div>
-                <div className='col-span-1 border rounded-lg text-center border-slate-400 hover:border-slate-900'>37</div>
-                <div className='col-span-1 border rounded-lg text-center border-slate-400 hover:border-slate-900'>38</div>
-              </div>
+              <h3 className='pb-2 text-2xl font-bold'>MÔ TẢ</h3>
+              <p>Dicta sunt explicabo. Nemo enim ipsam voluptatem voluptas sit odit aut fugit, sed quia consequuntur. Lorem ipsum dolor. Aquia sit amet, elitr, sed diam nonum eirmod tempor invidunt.</p>
             </div>
 
 
@@ -106,25 +101,25 @@ const ProductDetail = (props: Props) => {
 
 
 
-            <div className='logo'>
-              <div className='grid grid-cols-12 gap-2'>
-                  <div className='col-span-1 '>
-                    <img className='border rounded-full border-gray-300 p-2' src='https://theme.hstatic.net/200000306687/1000886682/14/productShare_image_1.png?v=87' width="50px" />
+            <div className='logo py-4 px-1'>
+              <div className='grid grid-cols-12 gap-4'>
+                  <div className='col-span-1 overflow-hidden'>
+                    <img  className='transition-transform duration-500 transform hover:scale-125 border rounded-full border-gray-300 p-2' src='https://theme.hstatic.net/200000306687/1000886682/14/productShare_image_1.png?v=87' width="50px" />
                   </div>
-                  <div className='col-span-1'>
-                    <img className='border rounded-full border-gray-300 p-2' src='https://theme.hstatic.net/200000306687/1000886682/14/productShare_image_2.png?v=87' width="50px"/>
+                  <div className='col-span-1 overflow-hidden'>
+                    <img className='transition-transform duration-500 transform hover:scale-125 border rounded-full border-gray-300 p-2' src='https://theme.hstatic.net/200000306687/1000886682/14/productShare_image_2.png?v=87' width="50px"/>
                   </div>
-                  <div className='col-span-1'>
-                    <img className='border rounded-full border-gray-300 p-2' src='https://theme.hstatic.net/200000306687/1000886682/14/productShare_image_3.png?v=87' width="50px" />
+                  <div className='col-span-1 overflow-hidden'>
+                    <img className='transition-transform duration-500 transform hover:scale-125 border rounded-full border-gray-300 p-2' src='https://theme.hstatic.net/200000306687/1000886682/14/productShare_image_3.png?v=87' width="50px" />
                   </div>
-                  <div className='col-span-1'>
-                    <img className='border rounded-full border-gray-300 p-2' src='https://theme.hstatic.net/200000306687/1000886682/14/productShare_image_4.png?v=87' width="50px"/>
+                  <div className='col-span-1 overflow-hidden'>
+                    <img className='transition-transform duration-500 transform hover:scale-125 border rounded-full border-gray-300 p-2' src='https://theme.hstatic.net/200000306687/1000886682/14/productShare_image_4.png?v=87' width="50px"/>
                   </div>
-                  <div className='col-span-1'>
-                    <img className='border rounded-full border-gray-300 p-2' src='https://theme.hstatic.net/200000306687/1000886682/14/productShare_image_5.png?v=87'width="50px" />
+                  <div className='col-span-1 overflow-hidden'>
+                    <img className='transition-transform duration-500 transform hover:scale-125 border rounded-full border-gray-300 p-2' src='https://theme.hstatic.net/200000306687/1000886682/14/productShare_image_5.png?v=87'width="50px" />
                   </div>
-                  <div className='col-span-1'>
-                    <img className='border rounded-full border-gray-300 p-2' src='https://theme.hstatic.net/200000306687/1000886682/14/productShare_image_6.png?v=87'width="45px" />
+                  <div className='col-span-1 overflow-hidden'>
+                    <img className='transition-transform duration-500 transform hover:scale-125 border rounded-full border-gray-300 p-2' src='https://theme.hstatic.net/200000306687/1000886682/14/productShare_image_6.png?v=87'width="45px" />
                   </div>
               </div>
             </div>
@@ -151,8 +146,8 @@ const ProductDetail = (props: Props) => {
         <h3 className='text-2xl font-bold'>SẢN PHẨM LIÊN QUAN</h3>
         <div className='grid grid-cols-12 gap-20'>
           <div className='col-span-3 text-center hover:border-4 hover:border-gray-100 hover:shadow-lg rounded-lg pb-2 px-3'>
-              <div className='image '>
-                <img src='https://product.hstatic.net/200000306687/product/1u647v-4-650x650_96cd25246ecf4a82acb4e3c55608ad4b_grande.jpeg'  />
+              <div className='image overflow-hidden '>
+                <img className='transition-transform duration-500 transform hover:scale-75' src='https://product.hstatic.net/200000306687/product/1u647v-4-650x650_96cd25246ecf4a82acb4e3c55608ad4b_grande.jpeg'  />
               </div>
               <div className='content'>
                 <h4 className='text-lg font-bold'>Converse Chuck Taylor All Star SP OX</h4>
@@ -164,8 +159,8 @@ const ProductDetail = (props: Props) => {
               </div>
           </div>
           <div className='col-span-3 text-center hover:border-4 hover:border-gray-100 hover:shadow-lg rounded-lg pb-2 px-3'>
-              <div className='image '>
-                <img src='https://product.hstatic.net/200000306687/product/1u647v-4-650x650_96cd25246ecf4a82acb4e3c55608ad4b_grande.jpeg'  />
+              <div className='image overflow-hidden'>
+                <img className='transition-transform duration-500 transform hover:scale-75' src='https://product.hstatic.net/200000306687/product/1u647v-4-650x650_96cd25246ecf4a82acb4e3c55608ad4b_grande.jpeg'  />
               </div>
               <div className='content'>
                 <h4 className='text-lg font-bold'>Converse Chuck Taylor All Star SP OX</h4>
@@ -177,8 +172,8 @@ const ProductDetail = (props: Props) => {
               </div>
           </div>
           <div className='col-span-3 text-center hover:border-4 hover:border-gray-100 hover:shadow-lg rounded-lg pb-2 px-3'>
-              <div className='image '>
-                <img src='https://product.hstatic.net/200000306687/product/1u647v-4-650x650_96cd25246ecf4a82acb4e3c55608ad4b_grande.jpeg'  />
+              <div className='image overflow-hidden'>
+                <img className='transition-transform duration-500 transform hover:scale-75' src='https://product.hstatic.net/200000306687/product/1u647v-4-650x650_96cd25246ecf4a82acb4e3c55608ad4b_grande.jpeg'  />
               </div>
               <div className='content'>
                 <h4 className='text-lg font-bold'>Converse Chuck Taylor All Star SP OX</h4>
@@ -190,8 +185,8 @@ const ProductDetail = (props: Props) => {
               </div>
           </div>
           <div className='col-span-3 text-center hover:border-4 hover:border-gray-100 hover:shadow-lg rounded-lg pb-2 px-3'>
-              <div className='image '>
-                <img src='https://product.hstatic.net/200000306687/product/1u647v-4-650x650_96cd25246ecf4a82acb4e3c55608ad4b_grande.jpeg'  />
+              <div className='image overflow-hidden'>
+                <img className='transition-transform duration-500 transform hover:scale-75' src='https://product.hstatic.net/200000306687/product/1u647v-4-650x650_96cd25246ecf4a82acb4e3c55608ad4b_grande.jpeg'  />
               </div>
               <div className='content'>
                 <h4 className='text-lg font-bold'>Converse Chuck Taylor All Star SP OX</h4>
