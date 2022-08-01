@@ -5,7 +5,7 @@ type Props = {}
 
 const AdminPageUser = (props: Props) => {
   return (
-    <div>
+    <div className='h-full ml-14 mt-14 mb-10 md:ml-64'>
     <div className="mt-4 mx-4">
       <div className="w-full overflow-hidden rounded-lg shadow-xs">
         <div className="w-full overflow-x-auto">
