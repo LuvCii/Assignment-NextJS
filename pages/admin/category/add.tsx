@@ -3,7 +3,7 @@ import LayoutAdmin from '../../../components/Layout/admin'
 
 type Props = {}
 
-const EditCate = (props: Props) => {
+const AddCate = (props: Props) => {
   return (
     <div>
      
@@ -18,7 +18,7 @@ const EditCate = (props: Props) => {
 
         {/* Client Table */}
         <div className="mt-4 mx-4">
-          <h1  className='text-center font-bold text-2xl'>SỬA DANH MỤC SẢN PHẨM</h1>
+          <h1  className='text-center font-bold text-2xl'>THÊM DANH MỤC SẢN PHẨM</h1>
           <div className="w-full overflow-hidden rounded-lg shadow-xs">
             <div className="w-full overflow-x-auto">
             <form className="w-full max-w-sm">
@@ -27,7 +27,7 @@ const EditCate = (props: Props) => {
    </div>
    
    <div className='pt-4'> <button className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
-      Edit
+      Create
     </button>
     
   </div>
@@ -64,6 +64,6 @@ const EditCate = (props: Props) => {
     </div>
   )
 }
-EditCate.Layout = LayoutAdmin
+AddCate.Layout = LayoutAdmin
 
-export default EditCate
+export default AddCate
