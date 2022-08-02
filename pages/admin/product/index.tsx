@@ -5,7 +5,7 @@ type Props = {};
 
 function ListProduct({}: Props) {
   return (
-    <div className="h-full ml-14 mt-14 mb-10 md:ml-64 min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-white dark:bg-gray-700 text-black dark:text-white">
+    <div className="h-full ml-14 mt-14 mb-10 md:ml-64 flex flex-col flex-auto flex-shrink-0 antialiased bg-white dark:bg-gray-700 text-black dark:text-white">
       <div className="mt-4 mx-4">
         <div className="w-full overflow-hidden rounded-lg shadow-xs">
           <div className="w-full overflow-x-auto">
