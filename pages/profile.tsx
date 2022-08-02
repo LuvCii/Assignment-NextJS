@@ -5,10 +5,9 @@ type Props = {}
 
 const Profile = (props: Props) => {
     return (
-
         <>
             <div>
-                <div className="bg-gray-100 w-[1260px] mx-auto">
+                <div className="pt-28 bg-gray-100 w-4/6 mx-auto">
                     <div className="container mx-auto my-5 p-5">
                         <div className="md:flex no-wrap md:-mx-2 ">
                             <div className="w-full md:w-3/12 md:mx-2">

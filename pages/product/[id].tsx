@@ -5,7 +5,8 @@ type Props = {}
 
 const ProductDetail = (props: Props) => {
   return (
-    <div className='px-12 py-8'>
+    <div className='pt-28'>
+    <div className='w-4/6 mx-auto px-12 py-8'>
       <div className='grid grid-cols-12 gap-4 '>
            <div className='col-span-6'>
             <img src='https://product.hstatic.net/200000306687/product/155457v-drake1-650x650_6d9e4831accf40a2b5bbeaba8de13897_master.jpeg' />
@@ -91,15 +92,15 @@ const ProductDetail = (props: Props) => {
                 </div>
                 <div className='col-span-1'></div>
                 <div className='col-span-8 pl-24'>
-                  <button className='text-center py-2 px-44 border border-black rounded-lg hover:bg-black hover:text-white'>THÊM VÀO GIỎ HÀNG</button>
+                  <button className='text-center py-2  border border-black rounded-lg px-8 hover:bg-black hover:text-white'>Add to cart</button>
                 </div>
               </div>
               <div className='grid grid-cols-10 py-2'>
                   <div className='col-span-5'>
-                    <button className='border rounded-lg border-yellow-400 bg-yellow-400 hover:bg-yellow-300 text-center py-4 px-40 '>TÌM TẠI CỬA HÀNG</button>
+                    <button className='border rounded-lg border-yellow-400 bg-yellow-400 hover:bg-yellow-300 text-center py-4 px-8  '>Searching in shop</button>
                   </div>
                   <div className='col-span-5 pl-6'>
-                    <button className='border rounded-lg border-orange-500 bg-orange-500 hover:bg-orange-400 text-white text-center py-4 px-44 '>MUA HÀNG</button>
+                    <button className='border rounded-lg border-orange-500 bg-orange-500 hover:bg-orange-400 text-white text-center py-4 px-8  '>MUA HÀNG</button>
                   </div>
               </div>
             </div>
@@ -205,6 +206,7 @@ const ProductDetail = (props: Props) => {
 
         </div>
       </div>
+    </div>
     </div>
   )
 }

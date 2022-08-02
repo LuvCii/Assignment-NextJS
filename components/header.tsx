@@ -26,22 +26,22 @@ const Header = (props: Props) => {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="" >
+                                        <Link href="/product" >
                                             <a className="block text-base py-2 pr-4 pl-3 hover:translate-y-[-3px] ease-in-out transition-all text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-black dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Product</a>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="" >
+                                        <Link href="/post" >
                                             <a className="block text-base py-2 pr-4 pl-3 hover:translate-y-[-3px] ease-in-out transition-all text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-black dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Post</a>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="#" >
+                                        <Link href="/about" >
                                             <a className="block text-base py-2 pr-4 pl-3 hover:translate-y-[-3px] ease-in-out transition-all text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-black dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="#" >
+                                        <Link href="/contact" >
                                             <a className="block text-base py-2 pr-4 pl-3 hover:translate-y-[-3px] ease-in-out transition-all text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-black dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
                                         </Link>
                                     </li>
@@ -69,7 +69,7 @@ const Header = (props: Props) => {
 
                                 <ul className="flex flex-col mt-5 mx-2 md:flex-row md:mt-0  ">
                                     <li className='mx-2 '>
-                                        <Link href="" className="p-2" aria-current="page">
+                                        <Link href="/cart" className="p-2" aria-current="page">
                                             <a >
                                                 <img src="https://i.ibb.co/5x4WLYC/shopping-cart.png" width="30px" alt="" />
                                             </a>

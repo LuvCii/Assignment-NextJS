@@ -68,7 +68,7 @@ const Home: NextPage = () => {
 
         {/* //? Sản phẩm mới nhất */}
         <div className='bg-gray-100 my-16 py-16 relative'>
-          <div className='w-4/6 my-4 mx-auto flex justify-between'>
+          <div className='relative w-4/6 my-4 mx-auto flex justify-between'>
             <div >
               <div>
                 <h2 className='font-bold text-5xl'>Best Seller</h2>

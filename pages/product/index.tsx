@@ -5,28 +5,38 @@ type Props = {}
 
 const ProductPage = (props: Props) => {
   return (
-    <div className='bg-gray-100'>
-      <div className='grid grid-cols-12 px-12 py-24 gap-4'>
+    <div className='pt-28 bg-gray-100'>
+      <div className='w-4/6 mx-auto grid grid-cols-12 px-12 py-24 gap-4'>
         <div className='col-span-3 bg-white border border-gray-100 p-4'>
-          <div className='grid grid-cols-4'>
-            <div className='col-span-2'> <h1 className='text-2xl font-bold font-serif'>CATEGORY</h1>
-            <hr className='py-2'></hr></div>
-            <div className='col-span-2'> <img src='https://cdn-icons-png.flaticon.com/512/134/134210.png' width="20px"/></div>
-            <nav className=''>
+          <div className=''>
+            <div className='flex justify-between'>
+              <div className='col-span-2'> 
+                <h1 className='text-2xl font-bold font-serif'>CATEGORY</h1>
+              </div>
+              <div className='col-span-2'> 
+                <img src='https://cdn-icons-png.flaticon.com/512/134/134210.png' width="16px"/>
+              </div>
+            </div>
+            <hr className='py-2'></hr>
+            
+            <nav className='w-3/4'>
               <li className='inline-block font-bold font-sans hover:text-red-700'><Link  href="">Drama</Link></li><br></br>
               <li className='inline-block font-bold font-sans hover:text-red-700'><Link href="">Mystery</Link></li><br></br>
               <li className='inline-block font-bold font-sans hover:text-red-700'><Link href="">Novels</Link></li><br></br>
               <li className='inline-block font-bold font-sans hover:text-red-700'><Link href="">Recipe Books</Link></li><br></br>
               <li className='inline-block font-bold font-sans hover:text-red-700'><Link href="">Uncategorized</Link></li>
             </nav>
-           
-          
-          
           </div>
-          <div className='grid grid-cols-4 py-8'>
-            <div className='col-span-2'> <h1 className='text-2xl font-bold font-serif'>AUTHOR</h1>
-            <hr className='py-2'></hr></div>
-            <div className='col-span-2'> <img src='https://cdn-icons-png.flaticon.com/512/134/134210.png' width="20px"/></div>
+          <div className='py-8'>
+            <div className='flex justify-between'>
+            <div className='col-span-2'> 
+            <h1 className='text-2xl font-bold font-serif'>AUTHOR</h1>
+            </div>
+            <div className='col-span-2'>
+               <img src='https://cdn-icons-png.flaticon.com/512/134/134210.png' width="16px"/>
+               </div>
+               </div>
+            <hr className='py-2'></hr>
             <nav className=''>
               <li className='inline-block font-bold font-sans hover:text-red-700'><input className='border rounded-lg border-black p-1' type="checkbox" /> <Link  href="">Drama</Link></li><br></br>
               <li className='inline-block font-bold font-sans hover:text-red-700'><input className='border rounded-lg border-black p-1' type="checkbox" /> <Link href="">Mystery</Link></li><br></br>
@@ -38,10 +48,16 @@ const ProductPage = (props: Props) => {
           
           
           </div>
-          <div className='grid grid-cols-4 '>
-            <div className='col-span-2'> <h1 className='text-2xl font-bold font-serif'>PRICE</h1>
-            <hr className='py-2'></hr></div>
-            <div className='col-span-2'> <img src='https://cdn-icons-png.flaticon.com/512/134/134210.png' width="20px"/></div>
+          <div className=''>
+            <div className='flex justify-between'>
+            <div className='col-span-2'> 
+            <h1 className='text-2xl font-bold font-serif'>PRICE</h1>
+            </div>
+            <div className='col-span-2'> 
+            <img src='https://cdn-icons-png.flaticon.com/512/134/134210.png' width="16px"/>
+            </div>
+            </div>
+            <hr className='py-2'></hr>
             <nav className=''>
               <li className='inline-block font-bold font-sans hover:text-red-700'><input className='border rounded-lg border-black p-1' type="checkbox" /> <Link  href="">50-100</Link></li><br></br>
               <li className='inline-block font-bold font-sans hover:text-red-700'><input className='border rounded-lg border-black p-1' type="checkbox" /> <Link href="">100-150</Link></li><br></br>

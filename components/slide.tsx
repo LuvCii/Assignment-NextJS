@@ -52,7 +52,7 @@ const Slide = (props: Props) => {
   };
 
   return (
-    <div className="m-10">
+    <div className="m-10 relative">
       <Zoom {...zoomInProperties}>
         {images.map((each, index) => (
           <div key={index} className="flex justify-center w-full h-full">

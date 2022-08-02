@@ -2,11 +2,11 @@ import React from 'react'
 import Link from 'next/link'
 type Props = {}
 
-const Shopping_Cart = (props: Props) => {
+const Cart = (props: Props) => {
   return (
-    <div>
+    <div className='relative pt-28 w-4/6 mx-auto '>
       
-        <div className='text-center px-24 py-24'>
+        <div className='text-center px-24 relative'>
           <h2 className='text-lime-800 text-3xl italic'>GIỎ HÀNG</h2>
             <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
               <li>
@@ -23,10 +23,10 @@ const Shopping_Cart = (props: Props) => {
                 </li>
             </ul>
         </div>
-        <div className='px-96 py-24'>
+        <div className=''>
 
 
-          <table className="w-2/3 text-center ">
+          <table className="w-full text-center mx-auto ">
             <thead className="border-b bg-gray-600">
               <tr>
                 <th scope="col" className="text-sm font-medium text-white px-6 py-4">
@@ -82,14 +82,10 @@ const Shopping_Cart = (props: Props) => {
               </tbody>
           
           </table>
-
-
-
-
         </div>
     </div>
     
   )
 }
 
-export default Shopping_Cart
+export default Cart
