@@ -11,9 +11,13 @@
             type: String,
             required: true
         },
-
         salt: {
             type: String
+        },
+        phone:{
+            type: Number,
+            minlength: 8,
+            required: true,
         },
         password: {
             type: String,
