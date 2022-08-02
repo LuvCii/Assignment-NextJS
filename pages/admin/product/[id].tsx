@@ -13,6 +13,26 @@ const EditProduct = (props: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="h-full ml-14 mt-14 mb-10 md:ml-64 flex flex-col flex-auto flex-shrink-0 antialiased bg-white dark:bg-gray-700 text-black dark:text-white">
+        <a
+          href="/admin/product"
+          className="mx-auto float-right w-20 bg-blue-600 my-2 hover:bg-grey text-grey-darkest font-bold py-2 px-4 rounded inline-flex items-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M3 12l6.414 6.414a2 2 0 001.414.586H19a2 2 0 002-2V7a2 2 0 00-2-2h-8.172a2 2 0 00-1.414.586L3 12z"
+            />
+          </svg>
+          <span>Back</span>
+        </a>
         <div className="mt-4 mx-4">
           <div className="max-w-5xl mx-auto">
             <form>
