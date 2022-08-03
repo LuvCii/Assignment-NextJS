@@ -1,8 +1,34 @@
+import router, { Router, useRouter } from "next/router";
 import React from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { signup } from "../api/auth";
+import LayoutEmpty from "../components/Layout/empty";
+import { User } from "../models/User";
 
-type Props = {};
+type FormInputs = {
+  name: string;
+  email: string;
+  phone: number;
+  password: string;
+};
 
-const SignupPage = (props: Props) => {
+const SignupPage = () => {
+  const router = useRouter();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormInputs>();
+  const onSubmit: SubmitHandler<FormInputs> = async (user) => {
+    const { data } = await signup(user);
+    console.log(data);
+    if (data) {
+      console.log("Đăng ký thành công");
+      router.push("/signin");
+      // setTimeout(() => {
+      // }, 2000);
+    }
+  };
   return (
     <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
@@ -16,7 +42,7 @@ const SignupPage = (props: Props) => {
             Sign up !
           </h2>
         </div>
-        <form className="mt-8 space-y-6" action="#" method="POST">
+        <form onSubmit={handleSubmit(onSubmit)} className="mt-8 space-y-6">
           <input type="hidden" name="remember" defaultValue="true" />
           <div className="rounded-md shadow-sm -space-y-px">
             <div>
@@ -27,8 +53,7 @@ const SignupPage = (props: Props) => {
                 Username
               </label>
               <input
-                id="username"
-                name="username"
+                {...register("name")}
                 type="text"
                 autoComplete="username"
                 required
@@ -43,9 +68,23 @@ const SignupPage = (props: Props) => {
                 Email address
               </label>
               <input
+                {...register("email")}
                 id="email-address"
-                name="email"
-                type="email"
+                autoComplete="email"
+                required
+                className="appearance-none relative block w-full px-3 py-2 border border-gray-400 placeholder-gray-500 text-gray-900 rounded focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm my-2"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="email-address"
+                className="text-base text-gray-500"
+              >
+                Phone
+              </label>
+              <input
+                {...register("phone")}
+                type="number"
                 autoComplete="email"
                 required
                 className="appearance-none relative block w-full px-3 py-2 border border-gray-400 placeholder-gray-500 text-gray-900 rounded focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm my-2"
@@ -56,8 +95,7 @@ const SignupPage = (props: Props) => {
                 Password
               </label>
               <input
-                id="password"
-                name="password"
+                {...register("password")}
                 type="password"
                 autoComplete="current-password"
                 required
@@ -87,10 +125,7 @@ const SignupPage = (props: Props) => {
             </div>
           </div>
           <div>
-            <button
-              type="submit"
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-            >
+            <button className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
               Sign up
             </button>
           </div>
@@ -99,5 +134,5 @@ const SignupPage = (props: Props) => {
     </div>
   );
 };
-
+SignupPage.Layout = LayoutEmpty;
 export default SignupPage;
