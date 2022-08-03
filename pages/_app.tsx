@@ -12,7 +12,6 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
       <SWRConfig value={{ fetcher: async (url) => await instance.get(url)}}>
       <Component {...pageProps} />
       </SWRConfig>
-      
     </LayoutWrapper>
   )
 }
