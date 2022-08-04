@@ -6,7 +6,7 @@ const router = Router()
 
 router.post("/category",createCate)
 router.get("/category",listCate)
-router.get("/category/:id",readCate)
+// router.get("/category/:id",readCate)
 router.patch("/category/:id",updateCate)
 router.delete("/category/:id",removeCate)
 router.get("/category/:id", readProOfCate)
