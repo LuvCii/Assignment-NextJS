@@ -4,7 +4,7 @@ import toastr from 'toastr'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import { userType } from "../../models/user"
-import { getUser, listUser } from '../../api/auth';
+import { getUser, listUser } from '../../api/user';
 import useAuth from '../../hooks/use-auth'
 import Layout from '../../components/Layout'
 

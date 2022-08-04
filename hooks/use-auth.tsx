@@ -1,4 +1,4 @@
-import { listUser, removeUser, updateUser } from "../api/auth";
+import { listUser, removeUser, updateUser } from "../api/user";
 import useSWR from "swr";
 
 const useAuth = (option? :any) => {

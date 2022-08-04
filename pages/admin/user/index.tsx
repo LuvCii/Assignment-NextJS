@@ -2,7 +2,7 @@ import React from 'react'
 import LayoutAdmin from '../../../components/Layout/admin'
 import Head from "next/head";
 import useAuth from "../../../hooks/use-auth";
-import { removeUser } from '../../../api/auth';
+import { removeUser } from '../../../api/user';
 type Inputs = {
   name: string,
   id: string,
