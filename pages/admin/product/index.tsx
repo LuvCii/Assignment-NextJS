@@ -75,19 +75,15 @@ function ListProduct() {
                       {/* <td className="px-4 py-3 text-sm">{item.categoryId}</td> */}
                       <td className="px-4 py-3 text-sm">{item.author}</td>
                       <td className="px-4 py-3 text-sm">
-                        <td className="px-4 py-3 text-xs">
-                          <span className="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100">
-                            <Link href={`/admin/product/${item._id}`}>
-                              Edit
-                            </Link>
-                          </span>
-                          /
-                          <span className="px-2 py-1 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700">
-                            <button onClick={() => remove(item._id)}>
-                              Delete
-                            </button>
-                          </span>
-                        </td>
+                        <span className="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100">
+                          <Link href={`/admin/product/${item._id}`}>Edit</Link>
+                        </span>
+                        /
+                        <span className="px-2 py-1 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700">
+                          <button onClick={() => remove(item._id)}>
+                            Delete
+                          </button>
+                        </span>
                       </td>
                     </tr>
                   ))}
