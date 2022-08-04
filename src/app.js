@@ -13,16 +13,16 @@ app.use(morgan("tiny"));
 app.use(express.json());
 
 app.use("/api", productRouter);
-app.use("/api",categoryRouter)
-app.use("/api",userRouter)
+app.use("/api", categoryRouter)
+app.use("/api", userRouter)
 
 
 mongoose
-  .connect("mongodb://localhost:27017/Assigment-NextJS")
-  .then(() => console.log("Ket noi db thanh cong"))
-  .catch((error) => console.log(error));
+    .connect("mongodb://localhost:27017/Assigment-NextJS")
+    .then(() => console.log("Ket noi db thanh cong"))
+    .catch((error) => console.log(error));
 
 const PORT = 8000;
 app.listen(PORT, () => {
-  console.log("server running port", PORT);
+    console.log("server running port", PORT);
 });

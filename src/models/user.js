@@ -14,7 +14,7 @@
         salt: {
             type: String
         },
-        phone:{
+        phone: {
             type: Number,
             minlength: 8,
             required: true,
@@ -23,6 +23,10 @@
             type: String,
             minlength: 8,
             required: true
+        },
+        avatar: {
+            type: String,
+
         },
         role: {
             type: Number,
