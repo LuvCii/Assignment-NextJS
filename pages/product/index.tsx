@@ -1,9 +1,13 @@
 import Link from 'next/link'
 import React from 'react'
+import useCategories from '../../hooks/use-category'
 
 type Props = {}
 
 const ProductPage = (props: Props) => {
+  const {data,error} = useCategories()
+  if(!data) return <div>Loading...</div>
+  if(error) return <div>Failed to load</div>
   return (
     <div className='pt-28 bg-gray-100'>
       <div className='w-4/6 mx-auto grid grid-cols-12 px-12 py-24 gap-4'>
@@ -20,11 +24,13 @@ const ProductPage = (props: Props) => {
             <hr className='py-2'></hr>
             
             <nav className='w-3/4'>
-              <li className='inline-block font-bold font-sans hover:text-red-700'><Link  href="">Drama</Link></li><br></br>
-              <li className='inline-block font-bold font-sans hover:text-red-700'><Link href="">Mystery</Link></li><br></br>
-              <li className='inline-block font-bold font-sans hover:text-red-700'><Link href="">Novels</Link></li><br></br>
-              <li className='inline-block font-bold font-sans hover:text-red-700'><Link href="">Recipe Books</Link></li><br></br>
-              <li className='inline-block font-bold font-sans hover:text-red-700'><Link href="">Uncategorized</Link></li>
+              {data.map((item:any) => {
+                return (
+                    <><li key={item._id} className='inline-block font-bold font-sans hover:text-red-700'><Link href={`/product/${item._id}`}>{item.name}</Link></li><br></br></>
+                )
+              })}
+              
+              
             </nav>
           </div>
           
