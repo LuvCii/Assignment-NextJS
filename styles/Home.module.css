@@ -73,7 +73,7 @@
 }
 
 .dropdownContent {
-  display: none;
+  /* display: none; */
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
@@ -88,6 +88,10 @@
 }
 
 .dropdownContent a:hover {
+  background-color: #f1f1f1;
+
+}
+.dropdownContent button:hover {
   background-color: #f1f1f1;
 
 }

@@ -8,7 +8,7 @@ import instance from '../api/instance';
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const LayoutWrapper = Component.Layout ?? Layout;
   return (
-    <LayoutWrapper>
+    <LayoutWrapper> 
       <SWRConfig value={{ fetcher: async (url) => await instance.get(url)}}>
       <Component {...pageProps} />
       </SWRConfig>
