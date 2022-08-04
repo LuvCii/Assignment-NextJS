@@ -8,7 +8,8 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import { categoryType } from '../../../models/category'
 import { getCate, listCate } from '../../../api/category'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // type Inputs = {
 //   name:string
 // }
@@ -28,7 +29,7 @@ const EditCate = () => {
   
   const onSubmit: SubmitHandler<categoryType> = async (category) => {
     const data = await update(category)
-  toastr.success("Sửa danh mục thành công")
+    toast.success("Sửa danh mục thành công, chờ 2s để chuyển trang")
     setTimeout(() => {
       
     router.push("/admin/category")
@@ -75,7 +76,7 @@ const EditCate = () => {
         </div>
       </div>
     </div>
-    <script src="toastr.js"></script>
+    <ToastContainer />
     </div>
   )
 }
