@@ -7,6 +7,7 @@ import LayoutAdmin from "../../../components/Layout/admin";
 import useProducts from "../../../hooks/use-product";
 import useSWR from "swr";
 import { readId } from "../../../api/product";
+import useCategories from "../../../hooks/use-category";
 
 type ProductProps = {
   _id: string;
@@ -46,6 +47,10 @@ const EditProduct = () => {
     await update(product);
     router.push("/admin/product");
   };
+  const { data: categories, error: errorCate } = useCategories();
+  if (!categories) return <div>Loading...</div>;
+  if (errorCate) return <div>Failed to load</div>;
+
   return (
     <>
       <Head>
@@ -211,18 +216,27 @@ const EditProduct = () => {
                   )}
                 </div>
                 <div className="z-0 mb-6 w-full group">
-                  {/* <select
-                    id="status"
+                  <select
+                    id="categoryId"
                     className="form-select appearance-none block w-full px-3 py-1.5 font-normal text-gray-400 border-0 border-b-2 border-gray-500 bg-gray-700 bg-clip-padding bg-no-repeat transition ease-in-out m-0 focus:text-gray-700 text-sm focus:bg-gray-700 focus:border-blue-600 focus:outline-none"
-                    {...register("status", { required: true })}
+                    {...register("categoryId", { required: true })}
                   >
                     <option value="" className="text-white">
                       Select Categories
                     </option>
-                  </select> */}
-                  {/* {errors.categoryId && "required" && (
+                    {categories.map((category: any, index: any) => (
+                      <option
+                        key={index}
+                        value={category._id}
+                        className="text-gray-400"
+                      >
+                        {category.name}
+                      </option>
+                    ))}
+                  </select>
+                  {errors.categoryId && "required" && (
                     <span style={{ color: "red" }}>This field is required</span>
-                  )} */}
+                  )}
                 </div>
               </div>
               <button
