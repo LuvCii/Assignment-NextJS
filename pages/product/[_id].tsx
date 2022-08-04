@@ -1,25 +1,34 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import React from 'react'
+import useSWR from 'swr'
 
 type Props = {}
 
 const ProductDetail = (props: Props) => {
+  const router = useRouter()
+  const { _id} = router.query
+  const {data, error} = useSWR(_id ? `/products/${_id}` : null)
+  console.log(data);
+  
+  if(!data) return <div>Loading...</div>
+  if(error) return <div>Failed</div>
   return (
     <div className='pt-28'>
     <div className='w-4/6 mx-auto px-12 py-8'>
       <div className='grid grid-cols-12 gap-4 '>
            <div className='col-span-6'>
-            <img src='https://bookbuy.vn/Res/Images/Product/9-mau-chia-ly_117801_1.PNG' />
+            <img src={data.image} />
            </div>
            <div className='col-span-6'>
-            <div className='text-xl font-bold'>Chuck Taylor All Star II Festival Knit</div>
+            <div className='text-xl font-bold'>{data.name}</div>
             <div className='grid grid-cols-6 gap-4 py-4'>
               <div className='col-span-3'>
                 <strong>Tình trạng:</strong>Còn hàng
                 
               </div>
               <div className='col-span-3'>
-              <strong>Author:</strong>hdkfke
+              <strong>Author:</strong>{data.author}
                
               </div>
             </div>
@@ -28,8 +37,8 @@ const ProductDetail = (props: Props) => {
 
 
             <div className='price py-4'>
-                <del className='pr-2'>780,000₫</del>
-                <span className='pr-2 text-red-500 text-xl font-bold'>600,000₫</span>
+                <del className='pr-2'>{data.sale_price}₫</del>
+                <span className='pr-2 text-red-500 text-xl font-bold'>{data.price}₫</span>
                
             </div>
             <hr></hr>
@@ -39,7 +48,7 @@ const ProductDetail = (props: Props) => {
 
             <div className=' pt-4 pb-8'>
 
-              <span className='text-xl font-bold'>Thông tin sản phẩm:</span> <span>degrth</span>
+              <span className='text-xl font-bold'>Thông tin sản phẩm:</span> <span>{data.description}</span>
               
 
             </div>
