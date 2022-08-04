@@ -19,6 +19,10 @@
             minlength: 8,
             required: true,
         },
+        avatar:{
+            type: String,
+            default: "",
+        },
         password: {
             type: String,
             minlength: 8,
