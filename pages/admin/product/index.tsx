@@ -6,7 +6,7 @@ import useProducts from "../../../hooks/use-product";
 
 type Props = {};
 
-function ListProduct({}: Props) {
+function ListProduct() {
   const { data, error, remove } = useProducts();
   if (error) return <div>error</div>;
   if (!data) return <div>loading</div>;

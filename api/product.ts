@@ -14,7 +14,7 @@ export const add = (product: productType) => {
 };
 
 export const edit = (product: productType) => {
-  return instance.put(`/products/${product._id}`, product);
+  return instance.patch(`/products/${product._id}`, product);
 };
 
 export const removeItem = (_id: productType) => {
