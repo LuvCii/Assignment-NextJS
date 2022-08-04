@@ -91,6 +91,10 @@
   background-color: #f1f1f1;
 
 }
+.dropdownContent button:hover {
+  background-color: #f1f1f1;
+
+}
 
 .dropdown:hover .dropdownContent {
   display: block;
