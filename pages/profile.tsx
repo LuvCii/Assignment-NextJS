@@ -1,13 +1,25 @@
 import Link from 'next/link'
 import React from 'react'
+import useAuth from '../hooks/use-auth'
 
-type Props = {}
+type Inputs = {
+    name: string,
+    email: string,
+    phone : string,
+    role: number,
 
-const Profile = (props: Props) => {
+}
+
+const Profile = () => {
+    const {data, error} = useAuth();
+    if(error) return <div>Fail to load</div>
+    if(!data) return <div>Loading...</div>
     return (
         <>
             <div>
-                <div className="pt-28 bg-gray-100 w-4/6 mx-auto">
+                {data.map((item :any) => {
+                    return(
+                    <div className="pt-28 bg-gray-100 w-4/6 mx-auto" key={item._id}>
                     <div className="container mx-auto my-5 p-5">
                         <div className="md:flex no-wrap md:-mx-2 ">
                             <div className="w-full md:w-3/12 md:mx-2">
@@ -17,7 +29,7 @@ const Profile = (props: Props) => {
                                             src="https://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg"
                                             alt="" />
                                     </div>
-                                    <h1 className="text-gray-900 font-bold text-xl leading-8 my-1">Jane Doe</h1>
+                                    <h1 className="text-gray-900 font-bold text-xl leading-8 my-1">{item.name}</h1>
                                     <h3 className="text-gray-600 font-lg text-semibold leading-6">Owner at Her Company Inc.</h3>
                                     <p className="text-sm text-gray-500 hover:text-gray-600 leading-6">Lorem ipsum dolor sit amet
                                         consectetur adipisicing elit.
@@ -27,7 +39,7 @@ const Profile = (props: Props) => {
                                         <li className="flex items-center py-3">
                                             <span>Status</span>
                                             <span className="ml-auto"><span
-                                                className="bg-green-500 py-1 px-2 rounded text-white text-sm">Active</span></span>
+                                                className="bg-green-500 py-1 px-2 rounded text-white text-sm">Admin</span></span>
                                         </li>
                                         <li className="flex items-center py-3">
                                             <span>Member since</span>
@@ -51,10 +63,10 @@ const Profile = (props: Props) => {
                                                     <div className="px-4 py-2 font-semibold text-xl">Name</div>
                                                 </div>
                                                 <div className='flex'>
-                                                    <div className="px-4 py-2 text-base">Jane</div>
+                                                    <div className="px-4 py-2 text-base">{item.name}</div>
 
                                                     <div className="">
-                                                        <Link href="">
+                                                        <Link href="/editProfile/editName">
                                                             <button className=' px-3 py-2'>
                                                                 <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="22" height="22"><path d="M18.656.93,6.464,13.122A4.966,4.966,0,0,0,5,16.657V18a1,1,0,0,0,1,1H7.343a4.966,4.966,0,0,0,3.535-1.464L23.07,5.344a3.125,3.125,0,0,0,0-4.414A3.194,3.194,0,0,0,18.656.93Zm3,3L9.464,16.122A3.02,3.02,0,0,1,7.343,17H7v-.343a3.02,3.02,0,0,1,.878-2.121L20.07,2.344a1.148,1.148,0,0,1,1.586,0A1.123,1.123,0,0,1,21.656,3.93Z" /><path d="M23,8.979a1,1,0,0,0-1,1V15H18a3,3,0,0,0-3,3v4H5a3,3,0,0,1-3-3V5A3,3,0,0,1,5,2h9.042a1,1,0,0,0,0-2H5A5.006,5.006,0,0,0,0,5V19a5.006,5.006,0,0,0,5,5H16.343a4.968,4.968,0,0,0,3.536-1.464l2.656-2.658A4.968,4.968,0,0,0,24,16.343V9.979A1,1,0,0,0,23,8.979ZM18.465,21.122a2.975,2.975,0,0,1-1.465.8V18a1,1,0,0,1,1-1h3.925a3.016,3.016,0,0,1-.8,1.464Z" />
                                                                 </svg>
@@ -71,7 +83,7 @@ const Profile = (props: Props) => {
                                                 </div>
                                                 <div className='flex'>
                                                     <div className="px-4 py-2 text-base">
-                                                        <a className="text-blue-800" href="mailto:jane@example.com">jane@example.com</a>
+                                                        <a className="text-blue-800" href="mailto:jane@example.com">{item.email}</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -102,7 +114,7 @@ const Profile = (props: Props) => {
                                                     <div className="px-4 py-2 font-semibold text-xl">Phone</div>
                                                 </div>
                                                 <div className='flex'>
-                                                    <div className="px-4 py-2 text-base">01234567</div>
+                                                    <div className="px-4 py-2 text-base">{item.phone}</div>
 
 
                                                 </div>
@@ -110,8 +122,9 @@ const Profile = (props: Props) => {
 
                                         </div>
                                     </div>
+                                     
                                     <button
-                                        className="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Change Password</button>
+                                        className="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4"><Link href={`/editProfile/${item._id}`}>Change Profile</Link></button>
                                 </div>
 
                                 <div className="my-4"></div>
@@ -180,6 +193,8 @@ const Profile = (props: Props) => {
                         </div>
                     </div>
                 </div >
+                )})}
+                
             </div>
         </>
     )
