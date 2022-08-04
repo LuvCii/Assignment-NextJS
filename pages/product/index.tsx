@@ -26,7 +26,7 @@ const ProductPage = (props: Props) => {
             <nav className='w-3/4'>
               {data.map((item:any) => {
                 return (
-                    <><li key={item._id} className='inline-block font-bold font-sans hover:text-red-700'><Link href={`/product/${item._id}`}>{item.name}</Link></li><br></br></>
+                    <><li key={item._id} className='inline-block font-bold font-sans hover:text-red-700'><Link href={`/category/${item._id}`}>{item.name}</Link></li><br></br></>
                 )
               })}
               
