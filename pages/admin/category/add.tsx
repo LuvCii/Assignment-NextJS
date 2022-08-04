@@ -3,9 +3,10 @@ import React from 'react'
 import LayoutAdmin from '../../../components/Layout/admin'
 import useCategories from '../../../hooks/use-category'
 import {SubmitHandler, useForm} from 'react-hook-form'
-import toastr from 'toastr'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 type Inputs = {
   name:string
@@ -17,7 +18,7 @@ const AddCate = () => {
   const {register, handleSubmit, formState: {errors}} = useForm<Inputs>()
   const onSubmit: SubmitHandler<Inputs> = async (category) => {
     const data = await create(category)
-  toastr.success("Thêm danh mục thành công")
+  toast.success("Thêm danh mục thành công, chờ 2s để chuyển trang")
     setTimeout(() => {
       
     router.push("/admin/category")
@@ -64,7 +65,7 @@ const AddCate = () => {
         </div>
       </div>
     </div>
-    <script src="toastr.js"></script>
+    <ToastContainer />
     </div>
   )
 }
