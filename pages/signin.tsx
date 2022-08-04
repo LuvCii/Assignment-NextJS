@@ -1,9 +1,10 @@
 import Router from "next/router";
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
 import { signin } from "../api/auth";
 import LayoutEmpty from "../components/Layout/empty";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 type FormInputs = {
   email: string;
@@ -24,7 +25,11 @@ const SignIn = () => {
     console.log(data);
     if(data){
       localStorage.setItem('User', JSON.stringify(userlocal));
-      Router.push('/')
+      setTimeout(() => {
+        Router.push('/')
+        toast.success("Login success")
+        
+      }, 2000);
     }
   };
   return (
@@ -112,6 +117,7 @@ const SignIn = () => {
           </form>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

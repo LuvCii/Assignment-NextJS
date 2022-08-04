@@ -3,7 +3,8 @@ import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { signup } from "../api/auth";
 import LayoutEmpty from "../components/Layout/empty";
-import { User } from "../models/User";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 type FormInputs = {
   name: string;
@@ -14,6 +15,7 @@ type FormInputs = {
 
 const SignupPage = () => {
   const router = useRouter();
+  const notify = () => toast("Wow so easy!");
   const {
     register,
     handleSubmit,
@@ -23,6 +25,8 @@ const SignupPage = () => {
     const { data } = await signup(user);
     console.log(data);
     if (data) {
+      {notify}
+      toast.success("đăng ký thành công")
       console.log("Đăng ký thành công");
       router.push("/signin");
       // setTimeout(() => {
@@ -131,6 +135,7 @@ const SignupPage = () => {
           </div>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };
