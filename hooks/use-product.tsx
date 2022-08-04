@@ -1,30 +1,27 @@
-import { add, edit, readId, removeItem } from "../api/product";
+import { add, edit, removeItem } from "../api/product";
 import useSWR from "swr";
+import { productType } from "../models/product";
 
 const useProducts = () => {
   const { data, error, mutate } = useSWR("/products");
 
-  //get
-  const getProductId = async (id: any) => {
-    const product = await readId(id);
-    mutate(product);
-  };
   // create
-  const create = async (item: any) => {
+  const create = async (item: productType) => {
     const product = await add(item);
     mutate(product);
   };
   // update
-  const update = async (item: any) => {
-    const product = await edit(item);
+  const update = async (product: productType) => {
+    await edit(product);
     mutate(product);
   };
   // delete
-  const remove = async (_id: any) => {
+  const remove = async (_id: productType) => {
     if (window.confirm("Are you sure delete?")) {
       await removeItem(_id);
-      const newProducts = data.filter((item: any) => item._id != _id);
-      mutate(newProducts);
+      const newProduct = data.filter((item: any) => item._id != _id);
+      console.log(newProduct);
+      mutate(newProduct);
     }
   };
   return {
@@ -33,7 +30,6 @@ const useProducts = () => {
     create,
     remove,
     update,
-    getProductId,
   };
 };
 
