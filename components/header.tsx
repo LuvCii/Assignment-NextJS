@@ -26,7 +26,8 @@ const userLocal = JSON.parse(localStorage.getItem('User') || '[]');
   
   if (checkout && userLocal.user.role == 1) {
     return (
-      <div>
+      
+      <>
         <header className=" relative">
           <div className=" relative">
             <nav className="fixed z-50 delay-150 bg-white border-gray-200 px-2 sm:px-4 w-full pt-7 rounded">
@@ -222,11 +223,11 @@ const userLocal = JSON.parse(localStorage.getItem('User') || '[]');
             </nav>
           </div>
         </header>
-      </div>
+      </>
     );
   } if(checkout && userLocal.user.role == 0) {
     return (
-      <div>
+      <>
         <header className=" relative">
           <div className=" relative">
             <nav className="fixed z-50 delay-150 bg-white border-gray-200 px-2 sm:px-4 w-full pt-7 rounded">
@@ -422,11 +423,11 @@ const userLocal = JSON.parse(localStorage.getItem('User') || '[]');
             </nav>
           </div>
         </header>
-      </div>
+      </>
     );
   }else{
     return(
-<div>
+<>
         <header className=" relative">
           <div className=" relative">
             <nav className="fixed z-50 delay-150 bg-white border-gray-200 px-2 sm:px-4 w-full pt-7 rounded">
@@ -622,7 +623,7 @@ const userLocal = JSON.parse(localStorage.getItem('User') || '[]');
             </nav>
           </div>
         </header>
-      </div>
+      </>
     );
   }
    }
