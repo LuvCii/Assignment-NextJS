@@ -14,6 +14,7 @@ const ProductDetail = (props: Props) => {
   if(!data) return <div>Loading...</div>
   if(error) return <div>Failed</div>
   return (
+    
     <div className='pt-28'>
     <div className='w-4/6 mx-auto px-12 py-8'>
       <div className='grid grid-cols-12 gap-4 '>
