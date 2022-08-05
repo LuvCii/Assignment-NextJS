@@ -11,20 +11,23 @@ const Header = (props: Props) => {
     e.preventDefault();
     window.localStorage.removeItem("User");
   }
-  // const [logger, setLogger] = useState(localStorage.getItem('User'))
+  // const [logger, setLogger] = useState([]);
   // useEffect(()=>{
-  //   setLogger(null)
-  // },[])
-  const checkout = typeof window !== 'undefined' ? localStorage.getItem('User') : null;
-  
-  console.log(checkout);
+  // const dataStorage = JSON.parse(localStorage.getItem('User') || '[]');
+  // if(dataStorage){
+  //   setLogger(logger)
+  //   console.log(dataStorage);
+  // }
+  //   })
+
+  // const checkout = typeof window !== 'undefined' ? localStorage.getItem('User') : null;
+  // console.log(logger);
   if (typeof window !== 'undefined') {
 const userLocal = JSON.parse(localStorage.getItem('User') || '[]');
  console.log(userLocal);
+
  
-  
-  
-  if (checkout && userLocal.user.role == 1) {
+  if (userLocal && userLocal.user.role == 1) {
     return (
       
       <>
@@ -225,7 +228,7 @@ const userLocal = JSON.parse(localStorage.getItem('User') || '[]');
         </header>
       </>
     );
-  } if(checkout && userLocal.user.role == 0) {
+  } if(userLocal && userLocal.user.role == 0) {
     return (
       <>
         <header className=" relative">
