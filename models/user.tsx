@@ -1,7 +1,8 @@
-export interface User {
-    _id?: number | string,
-    name: string,
-    email: string,
-    phone: number,
-    password: string
+export type userType = {
+    _id?: any,
+    name : string |undefined,
+    email: string ,
+    password: string,
+    role: number,
+    
 }
