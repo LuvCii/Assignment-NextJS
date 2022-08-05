@@ -14,6 +14,10 @@
         salt: {
             type: String
         },
+        address:{
+            type: String,
+            required: true
+        },
         phone:{
             type: Number,
             minlength: 8,

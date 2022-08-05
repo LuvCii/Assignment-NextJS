@@ -2,7 +2,7 @@ import User from "../models/user";
 import jwt from "jsonwebtoken";
 
 export const signup = async(req, res) => {
-    const { email, name, phone, password } = req.body
+    const { email, name, phone, password, address } = req.body
     try {
         const existUser = await User.findOne({ email }).exec();
         // key và value giống nhau thì viết 1 cái
@@ -11,7 +11,7 @@ export const signup = async(req, res) => {
                 message: "Email đã tồn tại"
             })
         };
-        const user = await new User({ email, name, phone, password }).save();
+        const user = await new User({ email, name, phone, password, address }).save();
         return res.json({
             user: {
                 _id: user._id,
@@ -48,7 +48,8 @@ export const signin = async(req, res) => {
                 name: user.name,
                 role: user.role,
                 phone: user.phone,
-                avatar: user.avatar
+                avatar: user.avatar,
+                address: user.address
             }
         })
     } catch (error) {
