@@ -74,3 +74,17 @@ export const update = async (req, res) => {
     });
   }
 };
+
+export const listLimit = async (req, res) => {
+  try {
+    const products = await Product.find({})
+      .sort({ createdAt: -1 })
+      .limit(8)
+      .exec();
+    return res.json(products);
+  } catch (error) {
+    return res.status(400).json({
+      message: "Không có sản phẩm nào",
+    });
+  }
+};
