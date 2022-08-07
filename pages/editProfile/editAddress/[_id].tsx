@@ -3,10 +3,10 @@ import {SubmitHandler, useForm} from 'react-hook-form'
 //import toastr from 'toastr'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import { User } from "../../models/User";
-import { getUser, listUser } from '../../api/user';
-import useAuth from '../../hooks/use-auth'
-import Layout from '../../components/Layout'
+import { User } from "../../../models/User";
+import { getUser, listUser } from '../../../api/user';
+import useAuth from '../../../hooks/use-auth'
+import Layout from '../../../components/Layout'
 import Link from 'next/link';
 
 const EditName = () => {
@@ -114,9 +114,9 @@ const EditName = () => {
                                                     <div className="px-4 py-2 font-semibold text-xl">Address</div>
                                                 </div>
                                                 <div className='flex'>
-                                                    <div className="px-4 py-2 text-base">Hà Nội</div>
+                                                    <div className="px-4 py-2 text-base">{item.address}</div>
 
-                                                    {/* <div className="">
+                                                    <div className="">
                                                         <Link href="">
                                                             <button className=' px-3 py-2'>
                                                                 <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="22" height="22"><path d="M18.656.93,6.464,13.122A4.966,4.966,0,0,0,5,16.657V18a1,1,0,0,0,1,1H7.343a4.966,4.966,0,0,0,3.535-1.464L23.07,5.344a3.125,3.125,0,0,0,0-4.414A3.194,3.194,0,0,0,18.656.93Zm3,3L9.464,16.122A3.02,3.02,0,0,1,7.343,17H7v-.343a3.02,3.02,0,0,1,.878-2.121L20.07,2.344a1.148,1.148,0,0,1,1.586,0A1.123,1.123,0,0,1,21.656,3.93Z" /><path d="M23,8.979a1,1,0,0,0-1,1V15H18a3,3,0,0,0-3,3v4H5a3,3,0,0,1-3-3V5A3,3,0,0,1,5,2h9.042a1,1,0,0,0,0-2H5A5.006,5.006,0,0,0,0,5V19a5.006,5.006,0,0,0,5,5H16.343a4.968,4.968,0,0,0,3.536-1.464l2.656-2.658A4.968,4.968,0,0,0,24,16.343V9.979A1,1,0,0,0,23,8.979ZM18.465,21.122a2.975,2.975,0,0,1-1.465.8V18a1,1,0,0,1,1-1h3.925a3.016,3.016,0,0,1-.8,1.464Z" />
@@ -124,7 +124,7 @@ const EditName = () => {
 
                                                             </button>
                                                         </Link>
-                                                    </div> */}
+                                                    </div>
                                                 </div>
                                             </div>
 
@@ -157,23 +157,23 @@ const EditName = () => {
                   htmlFor=""
                   className="px-4 py-2 font-semibold text-xl"
                 >
-                  Name
+                  Address
                 </label>
                 <input
                   type="name"
                   className="py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                  {...register("name", { required: true, minLength: 5 })}
+                  {...register("address", { required: true, minLength: 5 })}
                 />
-                {errors.name && errors.name.type === "required" && (
+                {/* {errors.name && errors.name.type === "required" && (
                   <span style={{ color: "red" }}>This field is required</span>
                 )}
                 {errors.name && errors.name.type === "minLength" && (
                   <span style={{ color: "red" }}>
                     Enter at least 5 characters
                   </span>
-                )}
+                )} */}
               </div>
-              <div className="z-0 mb-6 w-full group">
+              {/* <div className="z-0 mb-6 w-full group">
                 <label
                   htmlFor=""
                   className="px-4 py-2 font-semibold text-xl"
@@ -185,8 +185,8 @@ const EditName = () => {
                   className="py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   {...register("email", { required: true, minLength: 5 })}
                 />
-              </div>
-              <div className="z-0 mb-6 w-full group">
+              </div> */}
+              {/* <div className="z-0 mb-6 w-full group">
                 <label
                   htmlFor=""
                   className="px-4 py-2 font-semibold text-xl"
@@ -198,7 +198,7 @@ const EditName = () => {
                   className="py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   {...register("phone", { required: true, minLength: 5 })}
                 />
-              </div>
+              </div> */}
               <div>
               <button
                 type="submit"

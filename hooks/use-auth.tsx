@@ -1,4 +1,4 @@
-import { listUser, removeUser, updateUser } from "../api/user";
+import { listUser, removeUser, updateUser, getUser } from "../api/user";
 import useSWR from "swr";
 
 const useAuth = (option? :any) => {
@@ -18,6 +18,11 @@ const useAuth = (option? :any) => {
         await updateUser(user)
         const newUser = data.map((item:any) => item._id === data._id ? user :item)
     }
+    //getUser
+    // const getUserById = async(_id:any) => {
+    //     await getUser(_id);
+    //     const 
+    // }
     return {
         data,
         error,
