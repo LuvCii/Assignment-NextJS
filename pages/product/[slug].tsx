@@ -21,7 +21,9 @@ const ProductDetail = (props: Props) => {
             <img src={data.image} />
           </div>
           <div className="col-span-6">
-            <div className="text-xl font-bold">{data.name}</div>
+            <div >
+            <h3 className="text-2xl font-bold font-serif uppercase">{data.name}</h3>
+              </div>
             <div className="grid grid-cols-6 gap-4 py-4">
               <div className="col-span-3">
                 <strong>Status: </strong>
@@ -67,86 +69,16 @@ const ProductDetail = (props: Props) => {
                   </button>
                 </div>
               </div>
-              <div className="grid grid-cols-10 py-2">
-                <div className="col-span-5">
-                  <button className="border rounded-lg border-yellow-400 bg-yellow-400 hover:bg-yellow-300 text-center py-4 px-8  ">
-                    Searching in shop
-                  </button>
-                </div>
-                <div className="col-span-5 pl-6">
-                  <button className="border rounded-lg border-orange-500 bg-orange-500 hover:bg-orange-400 text-white text-center py-4 px-8  ">
-                    MUA HÀNG
-                  </button>
-                </div>
-              </div>
+              
             </div>
 
-            <div className="logo">
-              <div className="grid grid-cols-12 gap-2">
-                <div className="col-span-1 ">
-                  <img
-                    className="border rounded-full border-gray-300 p-2"
-                    src="https://theme.hstatic.net/200000306687/1000886682/14/productShare_image_1.png?v=87"
-                    width="50px"
-                  />
-                </div>
-                <div className="col-span-1">
-                  <img
-                    className="border rounded-full border-gray-300 p-2"
-                    src="https://theme.hstatic.net/200000306687/1000886682/14/productShare_image_2.png?v=87"
-                    width="50px"
-                  />
-                </div>
-                <div className="col-span-1">
-                  <img
-                    className="border rounded-full border-gray-300 p-2"
-                    src="https://theme.hstatic.net/200000306687/1000886682/14/productShare_image_3.png?v=87"
-                    width="50px"
-                  />
-                </div>
-                <div className="col-span-1">
-                  <img
-                    className="border rounded-full border-gray-300 p-2"
-                    src="https://theme.hstatic.net/200000306687/1000886682/14/productShare_image_4.png?v=87"
-                    width="50px"
-                  />
-                </div>
-                <div className="col-span-1">
-                  <img
-                    className="border rounded-full border-gray-300 p-2"
-                    src="https://theme.hstatic.net/200000306687/1000886682/14/productShare_image_5.png?v=87"
-                    width="50px"
-                  />
-                </div>
-                <div className="col-span-1">
-                  <img
-                    className="border rounded-full border-gray-300 p-2"
-                    src="https://theme.hstatic.net/200000306687/1000886682/14/productShare_image_6.png?v=87"
-                    width="45px"
-                  />
-                </div>
-              </div>
-            </div>
+           
           </div>
         </div>
+
+        
 
         <div className="py-12">
-          <h3 className="text-2xl font-bold">BÌNH LUẬN</h3>
-          <div className="grid grid-cols-12">
-            <div className="col-span-1"></div>
-            <div className="col-span-11">
-              <form>
-                <input
-                  className="border border-black h-24 pr-96 px-2 rounded-lg "
-                  type="text"
-                  placeholder="Viết bình luận vào đây"
-                />
-              </form>
-            </div>
-          </div>
-        </div>
-
-        <div>
           <h3 className="text-2xl font-bold">SẢN PHẨM LIÊN QUAN</h3>
           <div className="grid grid-cols-8 gap-2 justify-around flex-wrap">
             <div className="col-span-2 my-8 group relative hover:shadow-lg hover:shadow-zinc-600 hover:translate-y-[-15px] duration-500 ease-in-out transition-all bg-white rounded-md overflow-hidden">
@@ -214,7 +146,7 @@ const ProductDetail = (props: Props) => {
 
               <div className="w-full min-h-80 bg-white aspect-w-1 aspect-h-1 overflow-hidden  lg:h-80 lg:aspect-none">
                 <img
-                  src="https://bookbuy.vn/Res/Images/Product/9-mau-chia-ly_117801_1.PNG"
+                  src="https://nobita.vn/wp-content/uploads/2022/06/4143cb7b-8812-4eb7-b0bb-7f40ef76601e.jpeg"
                   alt=""
                   className="rounded-md px-12 pt-8 pb-4 overflow-hidden grayscale group-hover:grayscale-0  group-hover:scale-110 w-full h-full object-center object-cover ease-in-out transform transition-all lg:w-full lg:h-full"
                 />
@@ -311,7 +243,7 @@ const ProductDetail = (props: Props) => {
 
               <div className="w-full min-h-80 bg-white aspect-w-1 aspect-h-1 overflow-hidden  lg:h-80 lg:aspect-none">
                 <img
-                  src="https://bookbuy.vn/Res/Images/Product/9-mau-chia-ly_117801_1.PNG"
+                  src="https://nobita.vn/wp-content/uploads/2022/08/ba-gia-doc-boyslove-2-2.jpg"
                   alt=""
                   className="rounded-md px-12 pt-8 pb-4 overflow-hidden grayscale group-hover:grayscale-0  group-hover:scale-110 w-full h-full object-center object-cover ease-in-out transform transition-all lg:w-full lg:h-full"
                 />
@@ -408,7 +340,7 @@ const ProductDetail = (props: Props) => {
 
               <div className="w-full min-h-80 bg-white aspect-w-1 aspect-h-1 overflow-hidden  lg:h-80 lg:aspect-none">
                 <img
-                  src="https://bookbuy.vn/Res/Images/Product/9-mau-chia-ly_117801_1.PNG"
+                  src="https://nobita.vn/wp-content/uploads/2022/07/z3580090731576-32f02b7c75573db0cbf5d696210cb742.jpg"
                   alt=""
                   className="rounded-md px-12 pt-8 pb-4 overflow-hidden grayscale group-hover:grayscale-0  group-hover:scale-110 w-full h-full object-center object-cover ease-in-out transform transition-all lg:w-full lg:h-full"
                 />
@@ -505,7 +437,7 @@ const ProductDetail = (props: Props) => {
 
               <div className="w-full min-h-80 bg-white aspect-w-1 aspect-h-1 overflow-hidden  lg:h-80 lg:aspect-none">
                 <img
-                  src="https://bookbuy.vn/Res/Images/Product/9-mau-chia-ly_117801_1.PNG"
+                  src="https://nobita.vn/wp-content/uploads/2022/06/bia-ao.jpg"
                   alt=""
                   className="rounded-md px-12 pt-8 pb-4 overflow-hidden grayscale group-hover:grayscale-0  group-hover:scale-110 w-full h-full object-center object-cover ease-in-out transform transition-all lg:w-full lg:h-full"
                 />
