@@ -207,7 +207,7 @@ const EditProduct = () => {
                     <option value="1" className="text-gray-400">
                       Kích hoạt
                     </option>
-                    <option value="2" className="text-gray-400">
+                    <option value="0" className="text-gray-400">
                       Chưa kích hoạt
                     </option>
                   </select>

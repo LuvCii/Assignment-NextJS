@@ -11,22 +11,26 @@ const Header = (props: Props) => {
     e.preventDefault();
     window.localStorage.removeItem("User");
   }
-  // const [logger, setLogger] = useState(localStorage.getItem('User'))
+  // const [logger, setLogger] = useState([]);
   // useEffect(()=>{
-  //   setLogger(null)
-  // },[])
-  const checkout = typeof window !== 'undefined' ? localStorage.getItem('User') : null;
-  
-  console.log(checkout);
+  // const dataStorage = JSON.parse(localStorage.getItem('User') || '[]');
+  // if(dataStorage){
+  //   setLogger(logger)
+  //   console.log(dataStorage);
+  // }
+  //   })
+
+  // const checkout = typeof window !== 'undefined' ? localStorage.getItem('User') : null;
+  // console.log(logger);
   if (typeof window !== 'undefined') {
 const userLocal = JSON.parse(localStorage.getItem('User') || '[]');
  console.log(userLocal);
+
  
-  
-  
-  if (checkout && userLocal.user.role == 1) {
+  if (userLocal && userLocal.user.role == 1) {
     return (
-      <div>
+      
+      <>
         <header className=" relative">
           <div className=" relative">
             <nav className="fixed z-50 delay-150 bg-white border-gray-200 px-2 sm:px-4 w-full pt-7 rounded">
@@ -222,11 +226,11 @@ const userLocal = JSON.parse(localStorage.getItem('User') || '[]');
             </nav>
           </div>
         </header>
-      </div>
+      </>
     );
-  } if(checkout && userLocal.user.role == 0) {
+  } if(userLocal && userLocal.user.role == 0) {
     return (
-      <div>
+      <>
         <header className=" relative">
           <div className=" relative">
             <nav className="fixed z-50 delay-150 bg-white border-gray-200 px-2 sm:px-4 w-full pt-7 rounded">
@@ -422,11 +426,11 @@ const userLocal = JSON.parse(localStorage.getItem('User') || '[]');
             </nav>
           </div>
         </header>
-      </div>
+      </>
     );
   }else{
     return(
-<div>
+<>
         <header className=" relative">
           <div className=" relative">
             <nav className="fixed z-50 delay-150 bg-white border-gray-200 px-2 sm:px-4 w-full pt-7 rounded">
@@ -622,7 +626,7 @@ const userLocal = JSON.parse(localStorage.getItem('User') || '[]');
             </nav>
           </div>
         </header>
-      </div>
+      </>
     );
   }
    }

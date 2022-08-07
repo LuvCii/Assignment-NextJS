@@ -1,3 +1,4 @@
+
 export interface User {
     _id?: number | string,
     name: string,
@@ -5,4 +6,5 @@ export interface User {
     phone: number,
     password: string,
     address : string
+
 }
