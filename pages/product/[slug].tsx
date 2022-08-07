@@ -37,9 +37,9 @@ const ProductDetail = (props: Props) => {
             <hr></hr>
 
             <div className="price py-4">
-              <del className="pr-2">{formatter.format(data.sale_price)}</del>
+              <del className="pr-2">{formatter.format(data.price)}</del>
               <span className="pr-2 text-red-500 text-xl font-bold">
-                {formatter.format(data.price)}
+                {formatter.format(data.sale_price)}
               </span>
             </div>
             <hr></hr>
