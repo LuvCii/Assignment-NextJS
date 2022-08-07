@@ -2,6 +2,7 @@ import { Router } from "express";
 import {
   create,
   list,
+  listLimit,
   readId,
   readSlug,
   remove,
@@ -12,6 +13,7 @@ import { checkAuth } from "../middlewares/auth";
 const productRouter = Router();
 
 productRouter.get("/products", checkAuth, list);
+productRouter.get("/product", checkAuth, listLimit);
 productRouter.get("/products/:id", checkAuth, readId);
 productRouter.get("/product/:slug", checkAuth, readSlug);
 productRouter.post("/products", checkAuth, create);
