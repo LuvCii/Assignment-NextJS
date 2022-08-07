@@ -49,10 +49,10 @@ export const removeCate = async (req,res) => {
 
 export const readProOfCate = async (req,res) => {
 try {
-  const category = await Category.findOne({_id:req.params.id}).exec()
-  const products = await Product.find({category}).select("-category").exec()
+  const categoryId = await Category.findOne({_id:req.params.id}).exec()
+  const products = await Product.find({categoryId}).select("-categoryId").exec()
   res.json({
-    category,
+    categoryId,
     products
   })
 } catch (error) {
