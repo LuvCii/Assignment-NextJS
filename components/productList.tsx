@@ -80,7 +80,7 @@ const ProductList = (props: Props) => {
 
           <div className="h-[77%] bg-white overflow-hidden">
             <img
-              src="https://bookbuy.vn/Res/Images/Product/9-mau-chia-ly_117801_1.PNG"
+              src={product.image}
               alt={product.name}
               className="rounded-md px-12 pt-8 pb-4 overflow-hidden grayscale group-hover:grayscale-0  group-hover:scale-110 w-full h-full object-center object-cover ease-in-out transform transition-all lg:w-full lg:h-full"
             />
